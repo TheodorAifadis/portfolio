@@ -1,0 +1,83 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: 'Courier New', Courier, monospace;}
+
+.tab {
+overflow: hidden;
+border: 1px solid rgb(0, 0, 0);
+background-color: #8a7b7b;
+}
+
+
+.tab button {
+background-color: inherit;
+float: center;
+border: none;
+outline: none;
+cursor: pointer;
+padding: 14px 16px;
+transition: 0.3s;
+font-size: 17px;
+}
+
+
+.tab button:hover {
+background-color: rgb(150, 200, 250);
+}
+
+
+.tab button.active {
+background-color: rgb(150, 200, 250);
+}
+
+
+.tabcontent {
+display: none;
+padding: 6px 12px;
+border: 1px solid black;
+border-top: none;
+}
+</style>
+</head>
+<body>
+
+<link rel="stylesheet" type="text/css" href="portfolio.css" media="screen" />
+
+<h2>Portfolio</h2>
+
+<div class="tab">
+<button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+<button class="tablinks" onclick="openCity(event, 'Hej')">Hej</button>
+<button class="tablinks" onclick="openCity(event, 'My Games')">My Games</button>
+</div>
+
+<div id="About Me" class="tabcontent">
+<h3>Theo, 17, Huddinge</h3>
+</div>
+
+<div id="Hej" class="tabcontent">
+</div>
+
+<div id="My Games" class="tabcontent">
+<p>I have only created one game so far... </p>
+<a href="https://theodor1223.itch.io/slpe">Click here to play the Game</a>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+</script>
+</body>
