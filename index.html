@@ -2,12 +2,14 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-family: 'Courier New', Courier, monospace;}
+
+body {font-family: Comic Sans MS;}
+
 
 .tab {
 overflow: hidden;
 border: 1px solid rgb(0, 0, 0);
-background-color: #d14646;
+background-color: #eff8f7;
 }
 
 
@@ -24,12 +26,12 @@ font-size: 17px;
 
 
 .tab button:hover {
-background-color: rgb(150, 200, 250);
+background-color: rgb(140, 240, 223);
 }
 
 
 .tab button.active {
-background-color: rgb(150, 200, 250);
+background-color: rgb(140, 240, 223);
 }
 
 
@@ -43,9 +45,11 @@ border-top: none;
 </head>
 <body>
 
-<link rel="stylesheet" type="text/css" href="portfolio.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="digskap-grupp.css" media="screen" />
 
-<h2>Portfolio</h2>
+<h2>lol</h2>
+
+<h3>Epic Website</h2>
 
 <div class="tab">
 <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
@@ -53,17 +57,20 @@ border-top: none;
 <button class="tablinks" onclick="openCity(event, 'My Games')">My Games</button>
 </div>
 
-<div id="About Me" class="tabcontent">
-<h3>Theo, 17, Huddinge</h3>
+<div id="Videos" class="tabcontent">
+<h4>Theo, 17, Huddinge</h3>
 </div>
 
-<div id="Hej" class="tabcontent">
+<div id="Pictures" class="tabcontent">
+<h4>Hej:</h3>
 </div>
 
-<div id="My Games" class="tabcontent">
-<p>I have only created one game so far... </p>
-<a href="https://theodor1223.itch.io/slpe">Click here to play the Game</a>
+<div id="Game" class="tabcontent">
+<h4>My Game(s)</h4>
+<iframe src="https://itch.io/embed/644009" height="167" width="552" frameborder="0"><a href="https://theodor1223.itch.io/slpe">Slåpe by theodor1223</a></iframe>
 </div>
+
+
 
 <script>
 function openCity(evt, cityName) {
@@ -80,4 +87,5 @@ document.getElementById(cityName).style.display = "block";
 evt.currentTarget.className += " active";
 }
 </script>
+   
 </body>
